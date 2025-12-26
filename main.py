@@ -15,7 +15,8 @@ while True:
                 print("Bisness #: " , item)
         case 'Exit':
             break
-        case whaterver
+        case whaterver:
+            print("Hey, you entered an unknow command")
 print ("----!!!!!____Done----!!!!!____")
 
 
