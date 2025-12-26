@@ -1,21 +1,39 @@
 # user_prompt = "Type add or Show: "
 """ """
-todos = []
+todos = ["first" , "second", "third"]
 
 while True:
 
-    user_action = input("Type add, show, exit: ").capitalize()
+    user_action = input("Type add, show,edit, def, exit: ")
+    user_action = user_action.strip()
+
     match user_action:
-        case "Add":
+
+        case "add":
             todo  = input("Enter a todo: ")
             todos.append(todo.capitalize())
-        case  'Show':
+
+        case  'show' | 'display':
             #print (todos)
             for item in todos:
+                item = item.capitalize()
                 print("Bisness #: " , item)
-        case 'Exit':
+
+        case 'edit':
+            #print ("Got it!")
+            number = int (input("Enter a number of the todo to edit: "))
+            number = number-1
+            bufer = todos [number]
+            new_todo = input ("Enter New todo: ")
+            todos [number] = new_todo
+
+            print ("old value: ",bufer, " new value: ", todos [number])
+        case "def":
+            todos = ["first", "second", "third"]
+        case 'exit':
             break
-        case whaterver:
+
+        case _:
             print("Hey, you entered an unknow command")
 print ("----!!!!!____Done----!!!!!____")
 
@@ -29,7 +47,4 @@ print ("----!!!!!____Done----!!!!!____")
 
 
 
-
-
-    #   todos.append(todo.capitalize())
 
