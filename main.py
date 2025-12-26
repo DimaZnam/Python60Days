@@ -23,11 +23,11 @@ while True:
             #print ("Got it!")
             number = int (input("Enter a number of the todo to edit: "))
             number = number-1
-            bufer = todos [number]
+            buffer = todos [number]
             new_todo = input ("Enter New todo: ")
             todos [number] = new_todo
 
-            print ("Old value: ",bufer, " New value: ", todos [number])
+            print ("Old value: ",buffer, " New value: ", todos [number])
         case "def":
             todos = ["first", "second", "third"]
         case 'exit':
