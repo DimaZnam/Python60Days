@@ -15,9 +15,9 @@ while True:
 
         case  'show' | 'display':
             #print (todos)
-            for item in todos:
+            for index, item in enumerate(todos):
                 item = item.capitalize()
-                print("Bisness #: " , item)
+                print(index,".", item)
 
         case 'edit':
             #print ("Got it!")
@@ -27,7 +27,7 @@ while True:
             new_todo = input ("Enter New todo: ")
             todos [number] = new_todo
 
-            print ("old value: ",bufer, " new value: ", todos [number])
+            print ("Old value: ",bufer, " New value: ", todos [number])
         case "def":
             todos = ["first", "second", "third"]
         case 'exit':
