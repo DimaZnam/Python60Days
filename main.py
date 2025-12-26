@@ -30,6 +30,6 @@ print ("----!!!!!____Done----!!!!!____")
 
 
 
-z
+
     #   todos.append(todo.capitalize())
 
