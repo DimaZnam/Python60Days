@@ -1,37 +1,33 @@
-# user_prompt = "Type add or Show: "
-""" """
-#todos = ["first" , "second", "third"]
-#todos = []
 while True:
-
-    user_action = input("Type add, show, edit, def, complite, exit: ")
+    user_action = input("Type add, show, edit, def, complete, exit: ")
     user_action = user_action.strip()
 
     match user_action:
-
         case "add":
             todo  = input("Enter a todo: ") + "\n"
 
             file = open("todos.txt", "r")
             todos = file.readlines()
             file.close()
+
             todos.append(todo)
 
             file = open("todos.txt", 'w')
             file.writelines(todos)
             file.close()
-
         case  'show' | 'display':
             #print (todos)
             file = open("todos.txt", "r")
             todos = file.readlines()
             file.close()
 
+
+
+            print(todos)
+
             for index, item in enumerate(todos):
                 row = f"{index+1}-{item}"
-
                 print(row)
-
         case 'edit':
             #print ("Got it!")
             number = int (input("Enter a number of the todo to edit: "))
@@ -39,7 +35,6 @@ while True:
             buffer = todos [number]
             new_todo = input ("Enter New todo: ")
             todos [number] = new_todo
-
             print ("Old value: ",buffer, " New value: ", todos [number])
         case "def":
             todos = ["first", "second", "third"]
